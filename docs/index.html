@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JADAの燃料別メーカー別登録台数を基にした、日本のBEV登録台数インフォグラフィック。">
+  <title>EV ATLAS — 日本のBEV登録台数</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <nav><a class="brand" href="#top"><i></i> EV ATLAS</a><span>JAPAN BEV REGISTRATIONS / JADA</span></nav>
+      <div class="hero-copy" id="top"><p class="eyebrow">● MARKET PULSE <b>2026 JAN — AUG</b></p><h1>日本のBEV市場は<br><em>いま、動いている。</em></h1><p>JADAの燃料別メーカー別登録台数を基に、国内の登録乗用車BEVを可視化します。</p></div>
+      <div class="stats"><div><strong>69,441</strong><span>2026 YTD REGISTRATIONS</span></div><div><strong>+205%</strong><span>VS. 2025 JAN — AUG</span></div><div><strong>5</strong><span>TOP CATEGORIES</span></div></div>
+    </header>
+
+    <section class="panel" id="ranking"><div class="heading"><div><p>01</p><h2>メーカー別<br>BEV登録台数</h2></div><label>対象年<select id="yearSelect"></select></label></div><div class="switch"><button class="active" data-metric="units">台数</button><button data-metric="share">構成比</button></div><div id="bars" class="bars"></div><p class="source">SOURCE: JADA 燃料別メーカー別登録台数（乗用車）／軽自動車を除く</p></section>
+
+    <section class="panel share-panel"><div class="heading"><div><p>02</p><h2>市場の<br>構成比</h2></div><span id="sharePeriod" class="tag"></span></div><div class="share-wrap"><div id="donut" class="donut"><div><strong>100</strong><span>%</span><small>JADA BEV TOTAL</small></div></div><div id="legend" class="legend"></div></div><p class="insight" id="insight"></p></section>
+
+    <section class="panel"><div class="heading"><div><p>03</p><h2>年次の推移</h2></div><span class="tag">2026年は1〜8月</span></div><div class="trend"><div class="trend-line" id="trendLine"></div><div id="trendPoints" class="trend-points"></div></div><div class="trend-footer"><div><strong>+26.2%</strong><span>2022→2025</span></div><div><strong>69,441台*</strong><span>2026年1〜8月の登録台数</span></div><p>* 2026年は年途中の累計値です。</p></div></section>
+
+    <section class="panel monthly"><div class="heading"><div><p>04</p><h2>2026年<br>月次の動き</h2></div><div class="peak"><span>PEAK MONTH</span><strong>12,225</strong><em>2026年6月のBEV登録台数</em></div></div><div id="months" class="months"></div><p>年間データと途中経過を区別し、2026年は1〜8月累計として表示しています。</p></section>
+  </main>
+  <footer><span>EV ATLAS / JAPAN BEV DATA STORY</span><span>JADA FUEL-TYPE REGISTRATIONS · UPDATED SEP 2026</span><a href="#top">BACK TO TOP ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
